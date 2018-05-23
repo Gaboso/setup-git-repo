@@ -22,6 +22,7 @@ curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/rep
 curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/invalid"
 curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/question"
 curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/wontfix"
+curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/good%20first%20issue"
 
 # Create labels
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"Duplicate","color":"fb8c00"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
@@ -35,4 +36,3 @@ curl --user "$USER:$PASS" --include --request POST --data '{"name":"Next Version
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"Question","color":"009688"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"Wont Fix","color":"78909c"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
 curl --user "$USER:$PASS" --include --request POST --data '{"name":"Code Smell","color":"fbca04"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-
